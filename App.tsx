@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import Chatbot from './components/Chatbot';
 import VeoAnimator from './components/VeoAnimator';
@@ -7,15 +8,13 @@ import { VeoIcon, ChatIcon, KeyIcon } from './components/icons/Icons';
 
 type Tab = 'chat' | 'veo';
 
-// Fix for global type conflict by defining a specific interface as hinted by the error message.
-interface AIStudio {
-  hasSelectedApiKey: () => Promise<boolean>;
-  openSelectKey: () => Promise<void>;
-}
-
+// Fix for global type conflict by inlining the type definition to avoid naming collisions.
 declare global {
   interface Window {
-    aistudio: AIStudio;
+    aistudio: {
+      hasSelectedApiKey: () => Promise<boolean>;
+      openSelectKey: () => Promise<void>;
+    };
   }
 }
 

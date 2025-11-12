@@ -48,9 +48,16 @@ const VeoAnimator: React.FC<VeoAnimatorProps> = ({ onApiKeyError }) => {
 
     const loadingMessages = [
       "Initializing Veo generation...",
-      "Sending image to the model...",
-      "Generating video frames (this may take a few minutes)...",
-      "Almost there, finalizing the video...",
+      "Sending your image to the model...",
+      "Teaching pixels how to dance...",
+      "Brewing a potent potion of creativity...",
+      "Assembling your masterpiece frame by frame...",
+      "The digital director is on set, action!",
+      "Veo is weaving its magic on your image...",
+      "Rendering your vision into reality...",
+      "Polishing the final frames for the premiere...",
+      "Composing your visual symphony...",
+      "Great art requires patience, almost there...",
     ];
 
     let messageIndex = 0;
